@@ -30,21 +30,6 @@ header p {
     padding: 1.5rem;
 }
 
-.cta {
-    display: inline-block;
-    margin: 1rem 0;
-    padding: 0.8rem 1.5rem;
-    background-color: #ff5252;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.cta:hover {
-    background-color: #e04848;
-}
-
 .section {
     margin-bottom: 2rem;
 }
@@ -52,6 +37,14 @@ header p {
 .section img {
     width: 100%;
     border-radius: 10px;
+}
+
+.sectionheader {
+    margin-bottom: 2rem;
+}
+
+.sectionheader img {
+    width: 100%;
 }
 
 footer {
@@ -97,8 +90,9 @@ footer a:hover {
     }
 }
 
+/* Boutons de style */
 .cta {
-    display: inline-block;
+    display: inline-block; /* Boutons alignés en ligne, mais centrés */
     padding: 0.8rem 1.5rem;
     text-align: center;
     font-weight: bold;
@@ -107,33 +101,31 @@ footer a:hover {
     font-size: 1rem;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    margin: 1rem auto; /* Centre horizontalement chaque bouton */
+    border: 2px solid #ff5252; /* Bordure rouge par défaut */
+    background-color: #ff5252; /* Fond rouge */
+    color: black; /* Texte blanc */
 }
 
-.cta.primary {
-    background-color: #ff5252;
-    color: white;
-    border: 2px solid #ff5252;
+/* Centrage des boutons dans leur conteneur */
+.cta-container {
+    display: flex; /* Utilise flexbox pour aligner les boutons */
+    justify-content: center; /* Centre horizontalement */
+    gap: 1rem; /* Espace uniforme entre les boutons */
+    margin-top: 1rem; /* Espacement avec le texte au-dessus */
 }
 
-.cta.primary:hover {
-    background-color: white;
-    color: #ff5252;
+/* Effet hover pour tous les boutons */
+.cta:hover {
+    background-color: white; /* Fond blanc au survol */
+    color: #ff5252; /* Texte rouge au survol */
 }
 
-.cta.secondary {
-    background-color: transparent;
-    color: #ff5252;
-    border: 2px solid #ff5252;
-}
-
-.cta.secondary:hover {
-    background-color: #ff5252;
-    color: white;
-}
-
+/* Ajustement pour petits écrans */
 @media (max-width: 768px) {
     .cta {
         font-size: 0.9rem;
         padding: 0.6rem 1.2rem;
     }
 }
+
