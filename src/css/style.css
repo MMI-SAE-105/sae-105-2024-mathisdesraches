@@ -2,36 +2,55 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #f0f0f0, #c8c8ff);
-    color: #333;
+    background: white;
+    color: black;
 }
 
-header {
-    background: url('header-image.jpg') no-repeat center center/cover;
+.header {
+    position: relative;
+    background: url('assets/img/img6.jpg') no-repeat center center/cover;
     height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     color: white;
+    margin: 0; 
+    padding: 0;
+    overflow: hidden; 
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin: 0.5rem;
+.header__content {
+    position: relative;
+    text-align: center;
+    z-index: 2; 
 }
 
-header p {
-    font-size: 1.2rem;
+.header__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1; 
+    filter: brightness(0.5);
 }
 
 .container {
     padding: 1.5rem;
 }
 
+.main {
+    padding-top: 3rem; 
+    background: white;
+}
+
 .section {
-    margin-bottom: 2rem;
+    margin: 2rem auto; 
+    padding: 1rem;
+    max-width: 800px;
+    text-align: left;
 }
 
 .section img {
@@ -48,8 +67,8 @@ header p {
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background: linear-gradient(to bottom,#62559C, #FE3D3D);
+    color: black;
     text-align: center;
     padding: 1rem 0;
 }
@@ -90,9 +109,9 @@ footer a:hover {
     }
 }
 
-/* Boutons de style */
+
 .cta {
-    display: inline-block; /* Boutons alignés en ligne, mais centrés */
+    display: inline-block;
     padding: 0.8rem 1.5rem;
     text-align: center;
     font-weight: bold;
@@ -101,27 +120,27 @@ footer a:hover {
     font-size: 1rem;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    margin: 1rem auto; /* Centre horizontalement chaque bouton */
-    border: 2px solid #ff5252; /* Bordure rouge par défaut */
-    background-color: #ff5252; /* Fond rouge */
-    color: black; /* Texte blanc */
+    margin: 1rem auto; 
+    border: 2px solid #ff5252; 
+    background-color: #ff5252; 
+    color: black;
 }
 
-/* Centrage des boutons dans leur conteneur */
+
 .cta-container {
-    display: flex; /* Utilise flexbox pour aligner les boutons */
-    justify-content: center; /* Centre horizontalement */
-    gap: 1rem; /* Espace uniforme entre les boutons */
-    margin-top: 1rem; /* Espacement avec le texte au-dessus */
+    display: flex;
+    justify-content: center; 
+    gap: 1rem; 
+    margin-top: 1rem; 
 }
 
-/* Effet hover pour tous les boutons */
+
 .cta:hover {
-    background-color: white; /* Fond blanc au survol */
-    color: #ff5252; /* Texte rouge au survol */
+    background-color: white; 
+    color: #ff5252; 
 }
 
-/* Ajustement pour petits écrans */
+
 @media (max-width: 768px) {
     .cta {
         font-size: 0.9rem;

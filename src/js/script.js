@@ -8,6 +8,7 @@ document.querySelectorAll('.cta').forEach(button => {
     });
 });
 
+
 const currentYear = new Date().getFullYear();
 const footer = document.querySelector('footer');
 if (footer) {
