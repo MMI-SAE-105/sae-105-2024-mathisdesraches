@@ -37,6 +37,39 @@ body {
     filter: brightness(0.5);
 }
 
+.header__icons {
+    position: absolute;
+    top: 1rem; 
+    width: 85%;
+    display: flex;
+    justify-content: space-between; 
+    padding: 0 1rem; 
+    z-index: 10;
+}
+
+.header__icon-link {
+    display: inline-block;
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header__icon-link:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header__icon {
+    width: 70%; 
+    height: auto;
+}
+
 .container {
     padding: 1.5rem;
 }
@@ -66,20 +99,52 @@ body {
     width: 100%;
 }
 
-footer {
-    background: linear-gradient(to bottom,#62559C, #FE3D3D);
+.footer {
+    background: linear-gradient(to bottom, #62559C, #FE3D3D); 
     color: black;
     text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
 }
 
-footer a {
-    color: #ff5252;
-    text-decoration: none;
+
+.footer__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.footer__contact {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer__social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; 
+}
+
+.footer__icon-link {
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    background-color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer__icon-link:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.footer__icon {
+    width: 60%; 
+    height: auto;
 }
 
 .social-icons {
@@ -124,6 +189,7 @@ footer a:hover {
     border: 2px solid #ff5252; 
     background-color: #ff5252; 
     color: black;
+    box-shadow: 4px 4px 0px #aaa; 
 }
 
 

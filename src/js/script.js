@@ -14,3 +14,7 @@ const footer = document.querySelector('footer');
 if (footer) {
     footer.innerHTML += `<p>&copy; ${currentYear} Festival des films d'animation japonais</p>`;
 }
+
+document.querySelector('.close').addEventListener('click', () => {
+    alert('Menu fermé !');
+});
