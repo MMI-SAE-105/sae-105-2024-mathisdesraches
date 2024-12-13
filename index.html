@@ -39,16 +39,51 @@
     <div class="section">
         <h2>Venez faire des rencontres uniques et partager votre passion !</h2>
         <p>Le Festival des films d’animation japonais arrive à Belfort pour une édition exceptionnelle ! Pendant trois jours, du 11 au 13 juillet 2025, le Parc des Expositions de Belfort se transformera en un temple dédié à l’univers de l’animation japonaise, offrant aux amateurs de cinéma et aux passionnés de culture nippone une immersion totale dans cet art visuel unique.</p>
-        <div class="carousel">
-            <div class="carousel__container">
-                <img src="assets/img/img9.jpg" alt="Image 9" class="carousel__image">
-                <img src="assets/img/img5.jpg" alt="Image 5" class="carousel__image">
-                <img src="assets/img/img2.jpg" alt="Image 2" class="carousel__image">
-                <img src="assets/img/img4.jpg" alt="Image 4" class="carousel__image">
+        <div class="carousel" aria-labelledby="carousel-heading">
+            <div class="carousel__container" role="region" aria-live="polite">
+              <div class="carousel__item">
+                <img
+                  id="img1"
+                  src="assets/img/img2.jpg"
+                  alt="Image musique 1"
+                />
+              </div>
+              <div class="carousel__item">
+                <img
+                  id="img2"
+                  src="assets/img/img5.jpg"
+                  alt="Image musique 2"
+                />
+              </div>
+              <div class="carousel__item">
+                <img
+                  id="img3"
+                  src="assets/img/img10.jpg"
+                  alt="Image musique 3"
+                />
+              </div>
             </div>
-            <button class="carousel__btn carousel__btn--prev">&#10094;</button>
-            <button class="carousel__btn carousel__btn--next">&#10095;</button>
-        </div>
+            <div class="carousel__controls">
+              <button
+                class="carousel__button carousel__button--prev"
+                aria-label="DÃ©filer vers la gauche"
+              >
+                <img
+                  src="assets/icônes/black-right-arrow.svg"
+                  alt="fleche gauche"
+                />
+              </button>
+              <button
+                class="carousel__button carousel__button--next"
+                aria-label="DÃ©filer vers la droite"
+              >
+                <img
+                  src="assets/icônes/black-right-arrow.svg"
+                  alt="fleche droite"
+                />
+              </button>
+            </div>
+          </div>
         <div class="cta-container">
         <a href="festival.html" class="cta">PLUS D'INFOS</a>
         </div>

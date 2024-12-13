@@ -1,3 +1,26 @@
+// *** CAROUSEL ***
+// TODO
+const carousel = document.querySelector(".carousel__container");
+const prevButton = document.querySelector(".carousel__button--prev");
+const nextButton = document.querySelector(".carousel__button--next");
+const premierItem = document.querySelector(".carousel__item");
+const scrollAmount = premierItem.clientWidth;
+
+
+// Largeur de dÃ©filement dâ€™un item
+if (carousel) {
+ // Scroll au clic sur le bouton prÃ©cÃ©dent
+ prevButton.addEventListener("click", () => {
+   carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+ });
+
+
+ // Scroll au clic sur le bouton suivant
+ nextButton.addEventListener("click", () => {
+   carousel.scrollBy({ left: +scrollAmount, behavior: "smooth" });
+ });
+}
+
 const menuToggle = document.querySelector('.menu__toggle');
 const menu = document.querySelector('.menu');
 
@@ -17,65 +40,4 @@ clickableIcons.forEach(icon => {
     icon.addEventListener('click', () => {
         alert('Icône cliquée !'); 
     });
-});
-
-const carouselContainer = document.querySelector('.carousel__container');
-const images = document.querySelectorAll('.carousel__image');
-const prevButton = document.querySelector('.carousel__btn--prev');
-const nextButton = document.querySelector('.carousel__btn--next');
-
-let currentIndex = 0;
-const totalImages = images.length; 
-function updateCarousel() {
-    const offset = -currentIndex * 100; 
-    carouselContainer.style.transform = `translateX(${offset}%)`;
-}
-
-prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1; 
-    updateCarousel();
-});
-
-nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0; 
-    updateCarousel();
-});
-
-let autoScroll = setInterval(() => {
-    currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
-    updateCarousel();
-}, 3000);
-
-[prevButton, nextButton].forEach(button => {
-    button.addEventListener('mouseenter', () => clearInterval(autoScroll)); 
-    button.addEventListener('mouseleave', () => {
-        autoScroll = setInterval(() => {
-            currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
-            updateCarousel();
-        }, 3000);
-    });
-});
-
-const dots = document.querySelectorAll('.carousel__dot');
-
-function updateDots() {
-    dots.forEach(dot => dot.classList.remove('carousel__dot--active'));
-    dots[currentIndex].classList.add('carousel__dot--active');
-}
-
-updateCarousel();
-
-dots.forEach(dot => {
-    dot.addEventListener('click', (e) => {
-        currentIndex = parseInt(e.target.dataset.index);
-        updateCarousel();
-    });
-});
-
-const socialIcons = document.querySelectorAll('.footer__social-icon');
-
-socialIcons.forEach(icon => {
-    icon.addEventListener('click', () => {
-        alert('Lien social cliqué !'); 
-    });
-});
+})
