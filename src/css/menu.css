@@ -18,13 +18,15 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin: 20px 0;
+    text-decoration: none; 
+    color: inherit;
 }
 
 .separator {
     width: 50px;
     height: 2px;
     background-color: black;
-    margin: 10px auto;
+    margin: 65px auto;
 }
 
 .header {
